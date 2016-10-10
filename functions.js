@@ -29,7 +29,7 @@ function startMessage() {
 		textAlign(CENTER);
 		textSize(windowHeight / 40);
 		fill(50);
-		text("PRESS A/S/D FOR A SURPRISE, C TO CLEAR", windowWidth / 2, windowHeight / 2 + windowHeight / 20);
+		text("HOLD A/S/D FOR A SURPRISE, C TO CLEAR", windowWidth / 2, windowHeight / 2 + windowHeight / 20);
 	} else if (counter == 4) {
 		noStroke();
 		fill(255);
@@ -96,6 +96,8 @@ function cornerDraw() {
 
 function parade1() {
 	if (key === 'a') {
+		push();
+		translate(mouseX,mouseY);
 		for (var i = 0; i < width / 10; i++) {
 			for (var j = 0; j < height / 10; j++) {
 				noStroke();
@@ -103,11 +105,14 @@ function parade1() {
 				triangle(i * 30, j * 30, i * 30 + width/16, j * 30 + height/12, i * 30 + width/16, j * height/12 - 20);
 			}
 		}
+		pop();
 	}
 }
 
 function parade2() {
 	if (key === 's') {
+		push();
+		translate(mouseX,mouseY);
 		for (var i = 0; i < width / 10; i++) {
 			for (var j = 0; j < height / 10; j++) {
 				noStroke();
@@ -115,11 +120,14 @@ function parade2() {
 				triangle(i * 30, j * 30, i * 30 + width/4, j * 30 + height/3, i * 30 + width/4, j * height/3 - 20);
 			}
 		}
+		pop();
 	}
 }
 
 function parade3() {
 	if (key === 'd') {
+		push();
+		translate(mouseX,mouseY);
 		for (var i = 0; i < width / 10; i++) {
 			for (var j = 0; j < height / 10; j++) {
 				noStroke();
@@ -127,6 +135,7 @@ function parade3() {
 				triangle(i * 10, j * 10, i * 10 + width/2, j * 10 + height/4, i * 10 + width/5, j * 10 - height/7);
 			}
 		}
+		pop();
 	}
 }
 
